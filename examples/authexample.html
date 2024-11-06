@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Examples</title>
+</head>
+<body>
+  <input type="text" name="text" id="abc" >
+  <script>
+      var girisKodu = document.getElementById('abc');
+
+
+      girisKodu.onkeypress = function(){
+        try {
+
+
+if(isNaN(girisKodu.value)){
+  alert('Lütfen sayısal bir değer giriniz');
+}
+else if (girisKodu.value.length<5) {
+window.alert('Giriş kodunuz 5 karakterden az olamaz');
+}
+else if (girisKodu.value.length>5) {
+console.log('Giriş kodunuz 5 karakterden fazla olamaz');
+
+}
+} catch (error) {
+console.log(error);
+}
+     
+      }
+
+
+
+
+
+  </script>
+
+
+    
+</body>
+</html>
