@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vize final hesaplayıcı</title>
+</head>
+<body>
+    <div>
+        VİZE:<input type="text" id="text1">
+        FİNAL:<input type="text" id="text2">
+        DEVAMSIZLIK SAYISI:<input type="text" id="text3">
+        <input type="button" id="button" value="YOLLA" onmouseout="omout(this)" onmouseover="omover(this)" onclick="hesapla()">
+    </div>
+    <script>
+        function omout(elm) {
+            elm.style.backgroundColor = 'blue';
+        }   
+        function omover(elm) {
+            elm.style.backgroundColor = 'green';
+        }
+
+        function hesapla() {
+            var vize = parseFloat(document.getElementById('text1').value);
+            var final = parseFloat(document.getElementById('text2').value);
+            var devamsizlik = parseInt(document.getElementById('text3').value);
+            var sonuc = (vize * 0.4) + (final * 0.6);
+            var durum = '';
+
+            if (devamsizlik > 5) {
+                console.log('Devamsızlık sınırını aştınız');
+            } else {
+                if (sonuc >= 0 && sonuc < 40) {
+                    durum = 'FF';
+                    console.log(durum + ' ile KALDINIZ');
+                } else if (sonuc >= 40 && sonuc < 70) {
+                    durum = 'CC';
+                    console.log(durum + ' ile GEÇTİNİZ');
+                } else if (sonuc >= 70 && sonuc <= 100) {
+                    durum = 'AA';
+                    console.log(durum + ' ile GEÇTİNİZ');
+                } else {
+                    console.log('Hatalı giriş yaptınız');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
