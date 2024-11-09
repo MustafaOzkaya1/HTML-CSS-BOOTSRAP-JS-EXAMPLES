@@ -1,0 +1,60 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#search-bar {
+    width: 80%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+#drawer-menu {
+    background-color: #444;
+    color: white;
+    padding: 1rem;
+}
+
+#drawer-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#drawer-menu li {
+    margin: 0.5rem 0;
+}
+
+#drawer-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+#product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
